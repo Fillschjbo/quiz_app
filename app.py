@@ -1,4 +1,5 @@
 import json
+import random
 
 questions = []
 
@@ -49,15 +50,27 @@ def main_menu(games):
                 print("Please enter a valid number or 'M'.")
                 
 
-questions = data["games"][0]["questions"]
 
-def question_loop(questions):
+
+def question_loop(selected):
     score = 0
     wrong_answers = []
-
     letters = ["A", "B", "C", "D"]
 
-    for q in questions:
+    if selected != -1:
+        selected_game = data["games"][selected - 1]["questions"]
+
+    else:
+        all_questions = []
+        for game in data["games"]:
+            for q in game["questions"]:
+                all_questions.append(q)
+
+        random.shuffle(all_questions)
+
+        selected_game = all_questions[:75]
+
+    for q in selected_game:
         print("\n" + q["question"])
 
         for i, answer in enumerate(q["content"]):
@@ -85,7 +98,7 @@ def question_loop(questions):
                 "correct_text": q["content"][q["correct"]]
             })
 
-question_loop(questions)
+        print("\n" + "=" * 50)
 
 
 if __name__ == "__main__":
