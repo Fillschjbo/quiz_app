@@ -20,22 +20,35 @@ def question_loop(questions):
     score = 0
     wrong_answers = []
 
+    letters = ["A", "B", "C", "D"]
+
     for q in questions:
         print("\n" + q["question"])
-        for i, answer in enumerate(q["content"], start=1):
-                print(f"{i}. {answer}")
 
-        user_input = input("\nType your answer (1-4): ")
+        for i, answer in enumerate(q["content"]):
+            print(f"{letters[i]}. {answer}")
 
-        if user_input.lower() in ("q", "quit"):
-            print("Quitting early...")
-            break
+        while True:
+            user_input = input("\nYour answer (A-D): ").strip().upper()
 
-        if user_input.isdigit() and int(user_input) - 1 == q["correct"]:
+            if user_input in letters:
+                break
+            else:
+                print("gInvalid input. Please enter only A, B, C, or D.")
+
+        chosen_index = letters.index(user_input)
+
+        if chosen_index == q["correct"]:
             print("Correct!")
             score += 1
         else:
             print("Wrong!")
+            wrong_answers.append({
+                "question": q["question"],
+                "chosen": user_input,
+                "correct": letters[q["correct"]],
+                "correct_text": q["content"][q["correct"]]
+            })
 
 question_loop(questions)
 #
