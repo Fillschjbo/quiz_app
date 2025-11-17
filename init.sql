@@ -17,8 +17,6 @@ CREATE TABLE IF NOT EXISTS questions (
     FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
 );
 
-
-
 # stored procedures
 
 DELIMITER //
