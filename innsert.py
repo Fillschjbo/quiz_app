@@ -32,7 +32,7 @@ def import_json(file_path="questions.json"):
         cursor = conn.cursor()
         print("Connected!")
 
-        with open(file_path, 'r', encoding='utf8mb4') as f:
+        with open(file_path, 'r') as f:
             data = json.load(f)
 
         total_questions = 0
