@@ -1,5 +1,13 @@
-CREATE DATABASE IF NOT EXISTS quiz_db;
+DROP DATABASE IF EXISTS quiz_db;
+
+CREATE DATABASE quiz_db
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
 USE quiz_db;
+
+CREATE USER IF NOT EXISTS 'quiz_user'@'%' IDENTIFIED BY 'SecurePass123!';
+GRANT ALL PRIVILEGES ON quiz_db.* TO 'quiz_user'@'%';
+FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS games (
     id INT AUTO_INCREMENT PRIMARY KEY
@@ -8,7 +16,7 @@ CREATE TABLE IF NOT EXISTS games (
 CREATE TABLE IF NOT EXISTS questions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     game_id INT NOT NULL,
-    question_TEXT TEXT NOT NULL,
+    question_text TEXT NOT NULL,
     option_a VARCHAR(255) NOT NULL,
     option_b VARCHAR(255) NOT NULL,
     option_c VARCHAR(255) NOT NULL,

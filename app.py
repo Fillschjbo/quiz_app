@@ -1,4 +1,3 @@
-import random
 import mysql.connector
 from mysql.connector import Error
 from dotenv import load_dotenv, dotenv_values
@@ -25,7 +24,7 @@ def main_menu(connection):
     try:
         cursor.callproc('get_games')
         games = []
-        for result in cursor.storedresults():
+        for result in cursor.stored_results():
             games = result.fetchall()
 
         if not games:
@@ -69,7 +68,7 @@ def question_loop(connection, selected):
 
     try:
         if selected != -1:
-            cursor.callproc('GetQuestionsForGame' [selected])
+            cursor.callproc('GetQuestionsForGame', [selected])
             for results in cursor.stored_results():
                 rows = results.fetchall()
         else:
@@ -85,7 +84,7 @@ def question_loop(connection, selected):
         for row in rows:
             selected_game.append({
                 "question": row["question_text"],
-                "content": row["option_a", row["option_b"], row["option_c"], row["option_d"]],
+                "content": [row["option_a"], row["option_b"], row["option_c"], row["option_d"]],
                 "correct": row["correct_index"]
             })
         total_questions = len(selected_game)
