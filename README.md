@@ -20,8 +20,8 @@ This is a console-based Trivia Quiz Game written in Python. The game loads quest
 4. Run the insert.py file in order to import the data from question.json, into the quiz_db.
 5. Now you can run app.py to play the quiz game.
 
-In a real setting, you would also have to add a .env file and fill inn the correct info.
-You would also have to sett the password to match in the init.sql file.
+In a real setting, you would also have to add a .env file and fill in the correct info.
+You would also have to set the password to match in the init.sql file.
 
 ### Usage
 1. To start the quiz, you can simply run the app.py file after doing the installation steps above.
@@ -43,21 +43,31 @@ You would also have to sett the password to match in the init.sql file.
 - Both did 50/50 on insert.py
 - init.sql
 
+###Fillip reflection
+This project went relatively smoothly, and with no major hiccups. My Role in the project was to create the database and stored procedures,
+connect the app to the database, display the questions and answers, the user input for answers and store the answers data for
+the results function. The database is set up to match the questions.json file, to make migration as simple as possible. It is
+comprised of a games table and a questions table. The app takes the game ID to get the requested game and then loops through and displays the questions
+one by one. It then appends an array that stores the question, the option answered, and the correct answer for later use.
+The app was first made to work with the provided JSON file, and was then converted to be used with the SQL database.
+I am overall pleased with how the final product came out, and with the collaboration with my team member, Truls. We are both familiar
+with using git and working on projects as a team, which significantly simplified our collaboration.
+
 ### Team Reflection
 We think this project was interesting, as we needed to combine all the things we learned so far.
-On the other hand, maby not the best tasks for a group project. In order for both 
-to partake in the same task, we had to split the task in different functions. This can be a bit
+On the other hand, maybe not the best tasks for a group project. In order for both 
+to partake in the same task, we had to split the task into different functions. This can be a bit
 challenging as it can lead to merge conflicts. It also makes the other person dependent on you finishing your task
-before continuing. In other words maby a bit "stagnated". Fortunately we both worked efficiently, so it worked itself
+before continuing. In other words maybe a bit "stagnated". Fortunately we both worked efficiently, so it worked itself
 out nicely.
 
-Despite the things mentioned above, it went very smooth as a team. We communicated well, and both
-contributed to the task. Maby there is a better way for us to divide the tasks so it don´t feel so "stagnant", but
-it worked out ether way. We also have prior experience working together, witch probably helps as well.
+Despite the things mentioned above, it went very smoothly as a team. We communicated well, and both
+contributed to the task. Maybe there is a better way for us to divide the tasks so it doesn´t feel so "stagnant", but
+it worked out either way. We also have prior experience working together, which probably helps as well.
 To sum it up, I think we did a good job and both did their part:)
 
 ## Acknowledgments
-- questions.json file form Gokstad Akademiet
+- questions.json file from Gokstad Akademiet
 
 
 
