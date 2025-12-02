@@ -43,7 +43,7 @@ You would also have to set the password to match in the init.sql file.
 - Both did 50/50 on insert.py
 - init.sql
 
-###Fillip reflection
+### Fillip reflection
 This project went relatively smoothly, and with no major hiccups. My Role in the project was to create the database and stored procedures,
 connect the app to the database, display the questions and answers, the user input for answers and store the answers data for
 the results function. The database is set up to match the questions.json file, to make migration as simple as possible. It is
