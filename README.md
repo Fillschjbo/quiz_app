@@ -38,6 +38,17 @@ You would also have to set the password to match in the init.sql file.
 - .env
 - Readme.md
 
+### Truls Reflection
+I think this was a good opportunity to get some experience working with backend as a team.
+The task went really well, and we managed to collaborate in an efficient way. For the first task, I made
+the main game menu in the console. It makes an array of questions from the question.json file and displays them
+in the console as "game 1" and so on. It also allows for the user to select a mixed question quiz. I also made
+"show results", where you get your total score and the questions you got wrong. This went quite well, although I had to make
+some adjustment so it would work smoothly with Fillip´s code. The .env file was quick and easy to implement, and added it to the gitignore file.
+The insert fie also went quite smoothly, but had some problems with my interpreter. It was luckily a quick fix.
+At the end I made the Readme.md file, with installation, usage instructions and so on. All in all, it when very well I think.
+Both me and Fillip was already familiar with git, witch made the collaboration process very easy. 
+
 ### Fillip Contributions
 - app.py: Connect() and question_loop()
 - Both did 50/50 on insert.py
@@ -64,7 +75,7 @@ out nicely.
 Despite the things mentioned above, it went very smoothly as a team. We communicated well, and both
 contributed to the task. Maybe there is a better way for us to divide the tasks so it doesn´t feel so "stagnant", but
 it worked out either way. We also have prior experience working together, which probably helps as well.
-To sum it up, I think we did a good job and both did their part:)
+To sum it up, we think we did a good job and both did their part:)
 
 ## Acknowledgments
 - questions.json file from Gokstad Akademiet
