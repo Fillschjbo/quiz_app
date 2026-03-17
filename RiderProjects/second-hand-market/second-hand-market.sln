@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "second-hand-market", "second-hand-market\second-hand-market.csproj", "{5EEE2F2C-1D32-4232-BF46-FD7854075414}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EEE2F2C-1D32-4232-BF46-FD7854075414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEE2F2C-1D32-4232-BF46-FD7854075414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEE2F2C-1D32-4232-BF46-FD7854075414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEE2F2C-1D32-4232-BF46-FD7854075414}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
